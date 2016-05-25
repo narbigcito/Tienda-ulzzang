@@ -6,6 +6,10 @@
 package mx.gibran.entities;
 
 import java.io.Serializable;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,6 +29,23 @@ public class User implements Serializable {
     private String name;
     private String password;
     private String email;
+    
+    
+    public String encodePassword(String pass) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            md.update(pass.getBytes());
+            StringBuilder result = new StringBuilder();
+            for (byte byt : md.digest()) {
+                result.append(Integer.toString((byt & 0xff) + 0x100, 16).substring(1));
+            }
+            return result.toString();
+        } catch (NoSuchAlgorithmException e) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Error al codificar el password", e);
+            return "";
+        }
+
+    }
 
     public Long getId() {
         return id;
@@ -72,7 +93,9 @@ public class User implements Serializable {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+         if (this.password == null || !this.password.equals(password)) {
+            this.password = encodePassword(password);
+        }
     }
 
     public String getEmail() {
@@ -82,5 +105,6 @@ public class User implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
     
 }
