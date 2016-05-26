@@ -1,10 +1,40 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : May 25, 2016, 3:25:01 PM
-    Author     : gibran
-*/
+@font-face {
+    font-family: myFirstFont;
+    src: url(SofiaProLight-webfont.woff);
+}
 
+
+#top{
+    background-color: #211F32;
+    height: 110px;
+    width: 100%;
+    color:white;
+    font-family: myFirstFont;
+}
+
+#top img{
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+}
+
+#enlaces{    
+    height: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+    float: left;
+}
+
+#enlaces a{
+    color:white;
+    margin-right: 15px;
+}
+
+#redes{
+    float: right;
+    margin-right: 50px;
+}
+
+#enlaces a:hover{
+    color: #f17a85;
+}

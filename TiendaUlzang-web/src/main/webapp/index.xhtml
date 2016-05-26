@@ -1,17 +1,54 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        Cuando haces un momo en un servidor de aplicaciones web y supera los 100 nikes
-        
-        <br/>
-        
-        <img src="http://www.generadormemes.com/media/created/pvo8z5.jpg"/>
-        
-    </h:body>
-</html>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="template.xhtml">
 
+
+    <ui:define name="title">
+        Index
+    </ui:define>
+
+    <ui:define name="headers"> 
+    </ui:define>
+
+
+    <ui:define name="content">
+
+        <div class="flexslider" >
+                <ul class="slides">
+                    <li>
+                        <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/kitchen_adventurer_cheesecake_brownie.jpg" />
+                    </li>
+                    <li>
+                        <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/kitchen_adventurer_lemon.jpg" />
+                    </li>
+                    <li>
+                        <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/kitchen_adventurer_donut.jpg" />
+                    </li>
+                    <li>
+                        <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/kitchen_adventurer_caramel.jpg" />
+                    </li>
+                </ul>
+            </div>
+
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+        <!-- FlexSlider -->
+        <script src="#{facesContext.externalContext.requestContextPath}/public/slider/jquery.flexslider.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                SyntaxHighlighter.all();
+            });
+            $(window).load(function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                });
+            });
+        </script>
+    </ui:define>
+
+</ui:composition>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link type="text/css" rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/public/resources/css/default.css" />
+        <link type="text/css" rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/public/resources/css/cssLayout.css" />
+        <link type="text/css" rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/public/resources/css/responsiveLayout.css" />
+        <link type="text/css" rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/public/resources/css/efects.css" />
+        
+        <link rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/public/slider/flexslider.css" type="text/css" media="screen" />
+       
+
+    </h:head> 
+
+    <h:body>
+        <div id="top">
+            <a href="#"><img src="#{facesContext.externalContext.requestContextPath}/public/resources/images/logo.png"/></a>
+
+            <div id="enlaces">
+                <a class="wobble" href="#"><b>Home</b></a>
+                <a class="wobble" href="#"><b>Nosotros</b></a>
+                <a class="wobble" href="#"><b>Galeria</b></a>
+                <a class="wobble" href="#"><b>Contacto</b></a>
+            </div>
+            <div id="redes">
+                <a  class="wobble" href="#"><img src="#{facesContext.externalContext.requestContextPath}/public/resources/images/facebook.png" /></a>
+                <a  class="wobble" href="#"><img src="#{facesContext.externalContext.requestContextPath}/public/resources/images/google.png" /></a>
+            </div>
+
+
+        </div>
+
+
+        <ui:insert name="content"></ui:insert>
+
+    </h:body>
+</html>
