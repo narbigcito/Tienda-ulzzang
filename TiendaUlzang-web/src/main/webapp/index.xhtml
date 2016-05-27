@@ -9,27 +9,44 @@
     </ui:define>
 
     <ui:define name="headers"> 
+
     </ui:define>
 
 
     <ui:define name="content">
 
-        <div class="flexslider" >
-                <ul class="slides">
-                    <li>
-                        <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/kitchen_adventurer_cheesecake_brownie.jpg" />
-                    </li>
-                    <li>
-                        <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/kitchen_adventurer_lemon.jpg" />
-                    </li>
-                    <li>
-                        <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/kitchen_adventurer_donut.jpg" />
-                    </li>
-                    <li>
-                        <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/kitchen_adventurer_caramel.jpg" />
-                    </li>
-                </ul>
+
+
+        <div class="flexslider" style="margin: 0px; border: none;">
+            <ul class="slides">
+                <li>
+                    <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/1.jpg" />
+                    <p class="flex-caption sliderpocotexto"><b>Holi crayoli</b></p>
+                </li>
+                <li>
+                    <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/2.jpg" />
+                </li>
+                <li>
+                    <img src="#{facesContext.externalContext.requestContextPath}/public/slider/images/3.jpg" />
+                </li>
+            </ul>
+        </div>
+
+        <div id="categorias">
+            <div class="categoria" id="categoria-a">
+                TRENDING
             </div>
+        </div>
+        <div id="categorias">
+            <div class="categoria" id="categoria-b">
+                TRENDING
+            </div>
+        </div>
+        <div id="categorias">
+            <div class="categoria" id="categoria-c">
+                TRENDING
+            </div>
+        </div>
 
 
 
@@ -39,13 +56,17 @@
         <!-- FlexSlider -->
         <script src="#{facesContext.externalContext.requestContextPath}/public/slider/jquery.flexslider.js"></script>
 
-        <script type="text/javascript">
-            $(function () {
-                SyntaxHighlighter.all();
-            });
+
+
+
+        <script>
+
             $(window).load(function () {
                 $('.flexslider').flexslider({
                     animation: "slide",
+                    controlNav: false,
+                    slideshow: false
+
                 });
             });
         </script>

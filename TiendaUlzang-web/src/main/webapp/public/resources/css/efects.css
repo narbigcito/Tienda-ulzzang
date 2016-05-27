@@ -77,3 +77,30 @@
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
+
+.flex-caption {
+                width: 100%;
+                color: #FFF;
+                font-size: 200px;
+                margin-left: 300px;
+                margin-top: -30%;
+                font-family: myFirstFont;
+            }
+
+            p {
+                animation-duration: 3s;
+                animation-name: slidein;
+            }
+
+            @keyframes slidein {
+                from {
+                    margin-left: 100%;
+                    width: 300%
+                }
+
+                to {
+                    margin-left: 300px;
+                    width: 100%;
+                }
+            }

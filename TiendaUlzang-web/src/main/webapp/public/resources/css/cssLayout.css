@@ -3,6 +3,11 @@
     src: url(SofiaProLight-webfont.woff);
 }
 
+@font-face {
+    font-family: indulta-bold;
+    src: url(Indulta-SemiSerif-boldFFP.otf);
+}
+
 
 #top{
     background-color: #211F32;
@@ -37,4 +42,74 @@
 
 #enlaces a:hover{
     color: #f17a85;
+}
+
+#full-bottom{
+    clear: both;
+    width: 100%;
+    height: 200px;
+    background-color: #2e3037;
+}
+
+#bottom{
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.b-contacto{
+    width: 300px;
+    height: 200px;
+    color: #919495;
+    font-size: 16px;
+    font-family: indulta-bold;
+    text-align: center;
+    float: left;
+}
+
+.b-contacto a {
+    margin-top: 60px;
+}
+
+#redes-bottom{
+    background-color: #202227;
+    color:#E96656;
+}
+
+#redes-bottom a img{
+    width: 32px;
+    margin-right: 10px;
+}
+
+.texto-bottom{
+    color: #919495;
+    margin: 0 !important;
+}
+
+#categorias{
+    width: 100%;
+    color: #FFF;
+}
+
+#categoria-a{
+    width: calc(100%/3);
+    height: 300px;
+    background-image: url(../images/categoria-a.jpg);
+    background-position: center;
+    background-size: cover;
+    float: left;
+}
+
+#categoria-b{
+    width: calc(100%/3);
+    height: 300px;
+    background-image: url(../images/categoria-b.jpg);
+    float: left;
+}
+
+#categoria-c{
+    width: calc(100%/3);
+    height: 300px;
+    background-image: url(../images/categoria-c.jpg);
+    float: left;
 }
